@@ -35,10 +35,10 @@ int main(int argc, char** argv)
 
   // Write code to calculate C = A * B.
   int k;
-  for (i = 0; i < n; i++) {
-    for (j = 0; j < n; j++) {
-      for (k = 0; k < n; k++) {
-        c[i * n + j] += a[i * n + k] * b[k * n + j];
+    for (k = 0; k < n; k++)  {
+        for (j = 0; j < n; j++) {
+            for (i = 0; i < n; i++){
+                c[i * n + j] += a[i * n + k] * b[k * n + j];
       }
     }
   }

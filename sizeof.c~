@@ -1,0 +1,4 @@
+#include <stdio.h>
+void main(){
+  printf("the size of int is %d\n",sizeof(int));
+}

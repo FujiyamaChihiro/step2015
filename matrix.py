@@ -19,9 +19,9 @@ for i in xrange(n):
 begin = time.time()
 
 # Write code to calculate C = A * B.
-for i in xrange(n):
+for k in xrange(n):
     for j in xrange(n):
-        for k in xrange(n):
+        for i in xrange(n):
             c[i, j] += a[i, k] * b[k, j]
 
 end = time.time()
