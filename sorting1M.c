@@ -1,5 +1,5 @@
 //
-//  sorting.c
+//  sorting1M.c
 
 #include <stdio.h>
 #include <string.h>
