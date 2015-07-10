@@ -38,7 +38,6 @@ void Qsort(int *value,int left,int right){
 
 /*配列の要素を交換する*/
 void swap(int value[],int i,int j){
-    printf("よばれている\n");
     int tmp=value[i];
     value[i]=value[j];
     value[j]=tmp;
@@ -107,7 +106,6 @@ void merge1(int *i,int *j,int *full,int *id,int tmp1[],int tmp2[],int value1[]){
 int main(){
     int *value;
     value=(int *)malloc(sizeof(int)*NUMREAD);
-    printf("ここでおちてるよね\n");
     FILE* fp;
     FILE* fp1;
     FILE* fp2;
@@ -116,7 +114,6 @@ int main(){
     if(fp==NULL)fileNotFound();
     for(int i=0;i<4;i++){
         fread(&value,sizeof(int),NUMREAD,fp);
-        printf("ここは\n");
         Qsort(value,0,NUMREAD);//valueを昇順にソート
         //value[]のソート完了
         if(i==0)fp1=fopen("tmp1","wb");//バイナリモードで書き込み
@@ -137,7 +134,6 @@ int main(){
     tmp1=(int *)malloc(sizeof(int)*NUMREAD);
     int *tmp2;
     tmp2=(int *)malloc(sizeof(int)*NUMREAD);
-    printf("ここまできてるかな\n");
     fp1=fopen("tmp1","rb");//バイナリモードで読み込み
     fp2=fopen("tmp2","rb");//バイナリモードで読み込み
     fread(&tmp1,sizeof(int),NUMREAD,fp1);
